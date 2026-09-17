@@ -125,7 +125,7 @@
 
 ## Технический стек (планируемый)
 
-- **Frontend:** React + TypeScript + Vite
+- **Frontend:** React + TypeScript + Next.js
 - **Backend:** TBD
 - **Авторизация:** OAuth / SAML через Moodle
 - **База данных:** TBD

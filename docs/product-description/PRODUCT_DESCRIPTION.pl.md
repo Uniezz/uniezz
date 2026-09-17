@@ -125,7 +125,7 @@ Aplikacja obsługuje cztery języki:
 
 ## Stack technologiczny (planowany)
 
-- **Frontend:** React + TypeScript + Vite
+- **Frontend:** React + TypeScript + Next.js
 - **Backend:** TBD
 - **Autoryzacja:** OAuth / SAML przez Moodle
 - **Baza danych:** TBD

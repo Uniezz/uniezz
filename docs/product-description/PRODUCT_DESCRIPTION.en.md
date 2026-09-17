@@ -125,7 +125,7 @@ Strict content moderation is a core principle of the platform:
 
 ## Tech Stack (Planned)
 
-- **Frontend:** React + TypeScript + Vite
+- **Frontend:** React + TypeScript + Next.js
 - **Backend:** TBD
 - **Authentication:** OAuth / SAML via Moodle
 - **Database:** TBD

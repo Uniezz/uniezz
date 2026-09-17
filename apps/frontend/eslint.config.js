@@ -14,6 +14,9 @@ export default defineConfig([
       reactHooks.configs.flat.recommended,
     ],
     languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+      },
       globals: globals.browser,
     },
   },

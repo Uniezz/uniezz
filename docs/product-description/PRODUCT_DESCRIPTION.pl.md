@@ -125,7 +125,7 @@ Aplikacja obsługuje cztery języki:
 
 ## Stack technologiczny (planowany)
 
-- **Frontend:** React + TypeScript + Next.js (web); Expo / React Native (mobile)
+- **Frontend:** React + TypeScript + Vite + TanStack Router (web); Expo / React Native (mobile)
 - **Backend:** Go — własne API. Bez Supabase i innych BaaS; web i mobile łączą się wyłącznie z tym API
 - **Autoryzacja:** USOS (OAuth 1.0a), Microsoft Entra ID (OIDC), email OTP jako zapas — zob. `docs/auth/`
 - **Media:** AWS S3 — zdjęcia, załączniki w czacie, pliki egzaminów i inne przesyłane treści
@@ -134,4 +134,4 @@ Aplikacja obsługuje cztery języki:
 
 ---
 
-*Dokument: PRODUCT_DESCRIPTION (PL) · Uniezz · v1.1*
+*Dokument: PRODUCT_DESCRIPTION (PL) · Uniezz · v1.2*

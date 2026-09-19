@@ -125,7 +125,7 @@
 
 ## Технічний стек (плановий)
 
-- **Frontend:** React + TypeScript + Next.js (веб); Expo / React Native (мобільний)
+- **Frontend:** React + TypeScript + Vite + TanStack Router (веб); Expo / React Native (мобільний)
 - **Backend:** Go — власне API. Без Supabase та інших BaaS; веб і мобільний клієнт звертаються лише до цього API
 - **Авторизація:** USOS (OAuth 1.0a), Microsoft Entra ID (OIDC), email OTP як запасний варіант — див. `docs/auth/`
 - **Медіа:** AWS S3 — фото, вкладення в чаті, файли іспитів та інші завантаження користувачів
@@ -134,4 +134,4 @@
 
 ---
 
-*Документ: PRODUCT_DESCRIPTION (UK) · Uniezz · v1.1*
+*Документ: PRODUCT_DESCRIPTION (UK) · Uniezz · v1.2*

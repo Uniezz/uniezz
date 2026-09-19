@@ -4,7 +4,7 @@ Monorepo for the Uniezz student platform.
 
 ## Apps
 
-- `apps/frontend` — Next.js (App Router, static export)
+- `apps/frontend` — Vite + TanStack Router
 - `apps/mobile` — Expo / React Native
 - `apps/backend` — API (Go; the current Express stub will be replaced)
 
@@ -12,6 +12,8 @@ Monorepo for the Uniezz student platform.
 
 | Layer    | Choice                                       |
 | -------- | -------------------------------------------- |
+| Web      | Vite + React + TanStack Router               |
+| Mobile   | Expo / React Native                          |
 | API      | Go — own backend                             |
 | Media    | AWS S3                                       |
 | Auth     | USOS, Entra ID, email OTP — see `docs/auth/` |

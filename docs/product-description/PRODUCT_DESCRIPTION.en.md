@@ -125,7 +125,7 @@ Strict content moderation is a core principle of the platform:
 
 ## Tech Stack (Planned)
 
-- **Frontend:** React + TypeScript + Next.js (web); Expo / React Native (mobile)
+- **Frontend:** React + TypeScript + Vite + TanStack Router (web); Expo / React Native (mobile)
 - **Backend:** Go — own API. No Supabase or other BaaS; web and mobile talk only to this API
 - **Authentication:** USOS (OAuth 1.0a), Microsoft Entra ID (OIDC), email OTP fallback — see `docs/auth/`
 - **Media:** AWS S3 — photos, chat attachments, exam files, and other user uploads
@@ -134,4 +134,4 @@ Strict content moderation is a core principle of the platform:
 
 ---
 
-*Document: PRODUCT_DESCRIPTION (EN) · Uniezz · v1.1*
+*Document: PRODUCT_DESCRIPTION (EN) · Uniezz · v1.2*

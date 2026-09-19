@@ -5,12 +5,12 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "*.tsbuildinfo"],
-      "env": ["NEXT_PUBLIC_*", "NODE_ENV"]
+      "outputs": ["dist/**", "*.tsbuildinfo"],
+      "env": ["VITE_*", "NODE_ENV"]
     },
     "typecheck": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "*.tsbuildinfo"]
+      "outputs": ["dist/**", "*.tsbuildinfo"]
     },
     "lint": {
       "dependsOn": ["^build"],
@@ -19,7 +19,7 @@
     "dev": {
       "cache": false,
       "persistent": true,
-      "passThroughEnv": ["PORT", "SUPABASE_*", "NEXT_PUBLIC_*", "API_URL", "FRONTEND_URL"]
+      "passThroughEnv": ["PORT", "VITE_*", "API_URL", "FRONTEND_URL"]
     },
     "clean": {
       "cache": false
@@ -27,7 +27,7 @@
     "test": {
       "dependsOn": ["^build"],
       "outputs": [],
-      "passThroughEnv": ["PORT", "SUPABASE_*", "API_URL", "FRONTEND_URL"]
+      "passThroughEnv": ["PORT", "VITE_*", "API_URL", "FRONTEND_URL"]
     }
   }
 }

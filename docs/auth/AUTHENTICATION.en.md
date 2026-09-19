@@ -2,7 +2,7 @@
 
 ## Overview
 
-Uniezz verifies that a user is a real, active student before granting access. Five universities, three identity providers, one entry point for the frontend.
+Uniezz verifies that a user is a real, active student before granting access. Five universities, three identity providers, one entry point on the **Go API** for web and mobile. No Supabase.
 
 | University | Provider | Verified data |
 |------------|----------|---------------|
@@ -160,7 +160,7 @@ Limits: 3 codes per email per hour, 10 per IP per hour, 5 attempts before the co
 
 ## Unified Authentication Endpoint
 
-The frontend never talks to USOS, Entra, or the mail provider. It talks to one Uniezz endpoint, which dispatches to the right provider internally.
+Web and mobile never talk to USOS, Entra, or the mail provider. They talk to one Uniezz Go API, which dispatches to the right provider internally.
 
 ### Public API
 
@@ -255,7 +255,7 @@ A new university needs a provider entry and a tenant or installation ID. Routes,
 
 1. Register the USOS application at https://apps.umcs.pl/developers/ and store the credentials as backend secrets
 2. Register a multi-tenant Entra application and restrict it to the tenant IDs listed above
-3. Build the unified `/auth` routes and the provider interface
+3. Build the unified `/auth` routes and the provider interface on the Go API
 4. Implement the USOS provider — three-legged OAuth 1.0a with HMAC-SHA1 signing
 5. Implement the Entra provider, then test the Graph `$select` against one live account per university and record which fields are populated
 
@@ -274,4 +274,4 @@ A new university needs a provider entry and a tenant or installation ID. Routes,
 
 ---
 
-*Document: AUTHENTICATION (EN) · Uniezz · v2.2*
+*Document: AUTHENTICATION (EN) · Uniezz · v2.3*

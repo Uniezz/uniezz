@@ -2,7 +2,7 @@
 
 ## Przegląd
 
-Uniezz weryfikuje, czy użytkownik jest rzeczywistym, aktywnym studentem, zanim przyzna mu dostęp. Pięć uczelni, trzech dostawców tożsamości, jeden punkt wejścia dla frontendu.
+Uniezz weryfikuje, czy użytkownik jest rzeczywistym, aktywnym studentem, zanim przyzna mu dostęp. Pięć uczelni, trzech dostawców tożsamości, jeden punkt wejścia na **Go API** dla webu i mobile.
 
 | Uczelnia | Dostawca | Zweryfikowane dane |
 |----------|----------|--------------------|
@@ -160,7 +160,7 @@ Limity: 3 kody na adres na godzinę, 10 na IP na godzinę, 5 prób przed uniewa�
 
 ## Jednolity endpoint autoryzacji
 
-Frontend nigdy nie komunikuje się z USOS, Entra ani dostawcą poczty. Rozmawia z jednym endpointem Uniezz, który wewnętrznie kieruje żądanie do właściwego dostawcy.
+Web i mobile nigdy nie komunikują się z USOS, Entra ani dostawcą poczty. Rozmawiają z jednym Go API Uniezz, które wewnętrznie kieruje żądanie do właściwego dostawcy.
 
 ### Publiczne API
 
@@ -255,7 +255,7 @@ Nowa uczelnia wymaga wpisu dostawcy oraz identyfikatora tenanta lub instalacji. 
 
 1. Zarejestrować aplikację USOS na https://apps.umcs.pl/developers/ i umieścić klucze w sekretach backendu
 2. Zarejestrować aplikację multi-tenant w Entra i ograniczyć ją do wymienionych wyżej tenant ID
-3. Zbudować jednolite trasy `/auth` oraz interfejs dostawcy
+3. Zbudować jednolite trasy `/auth` oraz interfejs dostawcy na Go API
 4. Zaimplementować dostawcę USOS — trójetapowy OAuth 1.0a z podpisem HMAC-SHA1
 5. Zaimplementować dostawcę Entra, następnie przetestować `$select` z Graph na jednym aktywnym koncie każdej uczelni i zapisać, które pola są wypełnione
 
@@ -274,4 +274,4 @@ Nowa uczelnia wymaga wpisu dostawcy oraz identyfikatora tenanta lub instalacji. 
 
 ---
 
-*Dokument: AUTHENTICATION (PL) · Uniezz · v2.2*
+*Dokument: AUTHENTICATION (PL) · Uniezz · v2.3*

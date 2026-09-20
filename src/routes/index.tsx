@@ -1,3 +1,4 @@
+import { UIText } from '@/ui/components';
 import { Link, createFileRoute } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/')({
@@ -7,11 +8,14 @@ export const Route = createFileRoute('/')({
 function HomePage() {
   return (
     <main className="page">
-      <h1>Uniezz</h1>
-      <p className="lead">A platform for students of Lublin universities.</p>
+      <UIText>Uniezz</UIText>
+      <UIText>A platform for students of Lublin universities.</UIText>
       <Link className="button" to="/login">
         Sign in
       </Link>
+      <UIText size={'xxl'} color={'secondary'}>
+        Hello
+      </UIText>
     </main>
   );
 }

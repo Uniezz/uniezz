@@ -1,3 +1,4 @@
+import { UIText } from '@/ui/components';
 import { createFileRoute } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/(auth)/login')({
@@ -7,8 +8,8 @@ export const Route = createFileRoute('/(auth)/login')({
 function LoginPage() {
   return (
     <main className="page">
-      <h1>Sign in</h1>
-      <p className="lead">University authentication will be available here.</p>
+      <UIText>Sign in</UIText>
+      <UIText>University authentication will be available here.</UIText>
     </main>
   );
 }

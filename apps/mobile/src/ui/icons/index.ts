@@ -1,2 +1,0 @@
-// Export icons here
-export {};

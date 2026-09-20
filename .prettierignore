@@ -1,8 +1,4 @@
 dist
-.next
 node_modules
 *.tsbuildinfo
-.turbo
-docs
-design
-apps/frontend/src/config/router.ts
+src/config/router.ts

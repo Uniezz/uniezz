@@ -31,3 +31,15 @@ export const uibutton = cva('inline-flex gap-2 items-center justify-center round
     disabled: false,
   },
 });
+
+export const leftIconButton = cva('', {
+  variants: {
+    leftIconButtonColor: {
+      white: 'white',
+      black: 'black',
+    },
+  },
+  defaultVariants: {
+    leftIconButtonColor: 'white',
+  },
+});

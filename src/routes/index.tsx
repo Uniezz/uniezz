@@ -1,6 +1,6 @@
 import { UIButton, UIInput, UIText } from '@/ui/components';
 import { createFileRoute } from '@tanstack/react-router';
-import { Info } from 'lucide-react';
+import { Info, Map } from 'lucide-react';
 import { ChangeEvent, useState } from 'react';
 
 export const Route = createFileRoute('/')({
@@ -16,7 +16,9 @@ function HomePage() {
     <main className="page">
       <UIText>Uniezz</UIText>
       <UIText>A platform for students of Lublin universities.</UIText>
-      <UIButton navigateTo="/login">Sign in</UIButton>
+      <UIButton leftIconButtonColor={'black'} leftIcon={Map} navigateTo="/login">
+        Sign in
+      </UIButton>
       <UIText size={'xxl'} color={'secondary'}>
         Hello
       </UIText>

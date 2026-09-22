@@ -1,4 +1,3 @@
-import { ChangeEvent } from 'react';
 import { UIText } from './UIText';
 import { type LucideIcon } from 'lucide-react';
 import { uiInput } from '../styles';
@@ -9,7 +8,7 @@ type UIInputProps = {
   text: string;
   iconRight?: LucideIcon;
   errorText?: string;
-  onTextChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  onTextChange?: (newValue: string) => void;
   placeholder?: string;
 };
 
@@ -38,7 +37,7 @@ export const UIInput = ({
           className={`min-w-0 flex-1 outline-none`}
           type="text"
           value={text}
-          onChange={onTextChange}
+          onChange={(e) => onTextChange?.(e.target.value)}
           disabled={isDisabled}
           placeholder={placeholder}
         />

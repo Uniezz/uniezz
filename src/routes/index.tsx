@@ -1,7 +1,7 @@
-import { UIButton, UIInput, UIText } from '@/ui/components';
+import { UIButton, UICheckbox, UIInput, UIText } from '@/ui/components';
 import { createFileRoute } from '@tanstack/react-router';
 import { Info, Map } from 'lucide-react';
-import { ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -9,9 +9,8 @@ export const Route = createFileRoute('/')({
 
 function HomePage() {
   const [text, setText] = useState<string>('');
-  const onChangeText = (e: ChangeEvent<HTMLInputElement>) => {
-    setText(e.target.value);
-  };
+  const [checkBoxValue, setCheckBoxValue] = useState<boolean>(true);
+
   return (
     <main className="page">
       <UIText>Uniezz</UIText>
@@ -31,8 +30,9 @@ function HomePage() {
         iconLeft={Info}
         iconRight={Info}
         text={text}
-        onTextChange={onChangeText}
+        onTextChange={setText}
       />
+      <UICheckbox checked={checkBoxValue} onCheckedChange={setCheckBoxValue} />
     </main>
   );
 }

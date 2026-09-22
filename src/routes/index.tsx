@@ -1,4 +1,4 @@
-import { UIButton, UICheckbox, UIInput, UIText } from '@/ui/components';
+import { UIButton, UICheckbox, UIInput, UISlider, UIText } from '@/ui/components';
 import { createFileRoute } from '@tanstack/react-router';
 import { Info, Map } from 'lucide-react';
 import { useState } from 'react';
@@ -9,6 +9,7 @@ export const Route = createFileRoute('/')({
 
 function HomePage() {
   const [text, setText] = useState<string>('');
+  const [sliderValue, setSliderValue] = useState<number>(0);
   const [checkBoxValue, setCheckBoxValue] = useState<boolean>(true);
 
   return (
@@ -33,6 +34,7 @@ function HomePage() {
         onTextChange={setText}
       />
       <UICheckbox checked={checkBoxValue} onCheckedChange={setCheckBoxValue} />
+      <UISlider value={sliderValue} onValueChange={setSliderValue} />
     </main>
   );
 }

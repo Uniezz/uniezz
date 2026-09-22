@@ -19,6 +19,7 @@ export const uitext = cva('font-jakarta', {
       primary: 'text-primary',
       secondary: 'text-secondary',
       white: 'text-white-primary',
+      error: 'text-danger',
     },
   },
   defaultVariants: {

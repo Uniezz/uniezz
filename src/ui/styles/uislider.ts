@@ -3,7 +3,6 @@ import { cva } from 'class-variance-authority';
 export const uislider = cva(
   `
     h-1
-    w-full
     appearance-none
     rounded-full
     outline-none

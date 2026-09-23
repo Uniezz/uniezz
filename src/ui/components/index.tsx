@@ -4,3 +4,4 @@ export * from './UIInput';
 export * from './UICheckbox';
 export * from './UISlider';
 export * from './UIBadge';
+export * from './UIAvatar';

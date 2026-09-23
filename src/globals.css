@@ -17,12 +17,14 @@
   --color-blue-light: #2d4195;
   --color-periwinkle: #6d76b5;
   --color-ice: #e7f0ff;
-
+  --color-blue-soft: #e7ecfb;
   /* Status */
   --color-success: #12875c;
+  --color-success-soft: #dff3e9;
   --color-success-light: #dff3ea;
   --color-warning: #b5760a;
   --color-danger: #c6374d;
+  --color-danger-soft: #fae6ea;
   --color-danger-light: #fbe6ea;
 
   /* Accent */
@@ -32,6 +34,7 @@
 
   /* Additional */
   --color-ember: #f0703a;
+  --color-warning-soft: #fbefd9;
   --color-ember-soft: #ffede3;
   --color-teal: #12a594;
   --color-teal-soft: #ddf4f0;

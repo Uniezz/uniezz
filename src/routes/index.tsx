@@ -1,6 +1,6 @@
-import { UIButton, UICheckbox, UIInput, UISlider, UIText } from '@/ui/components';
+import { UIBadge, UIButton, UICheckbox, UIInput, UISlider, UIText } from '@/ui/components';
 import { createFileRoute } from '@tanstack/react-router';
-import { Info, Map } from 'lucide-react';
+import { Coffee, Dot, Info, Map, Panda } from 'lucide-react';
 import { useState } from 'react';
 
 export const Route = createFileRoute('/')({
@@ -35,6 +35,7 @@ function HomePage() {
       />
       <UICheckbox checked={checkBoxValue} onCheckedChange={setCheckBoxValue} />
       <UISlider value={sliderValue} onValueChange={setSliderValue} />
+      <UIBadge leftIcon={Coffee} text="Coffee" type={'note'} />
     </main>
   );
 }

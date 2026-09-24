@@ -1,12 +1,16 @@
-import { uislider } from '../styles';
+import { type ComponentProps } from 'react';
+import { cn } from '../cn';
 
-type UISliderProps = {
+type UISliderProps = Omit<
+  ComponentProps<'input'>,
+  'type' | 'value' | 'onChange' | 'min' | 'max' | 'step'
+> & {
   value: number;
   min?: number;
   max?: number;
   step?: number;
-  isDisabled?: boolean;
   onValueChange?: (value: number) => void;
+  isDisabled?: boolean;
 };
 
 export const UISlider = ({
@@ -16,6 +20,8 @@ export const UISlider = ({
   step = 1,
   isDisabled = false,
   onValueChange,
+  className,
+  ...props
 }: UISliderProps) => {
   const percentage = ((value - min) / (max - min)) * 100;
 
@@ -28,18 +34,20 @@ export const UISlider = ({
       step={step}
       disabled={isDisabled}
       onChange={(e) => onValueChange?.(Number(e.target.value))}
-      className={uislider({
-        disabled: isDisabled,
-      })}
+      className={cn(
+        `h-1 appearance-none rounded-full outline-none enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-60 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-3 [&::-moz-range-thumb]:border-blue-light [&::-moz-range-thumb]:bg-white-primary disabled:[&::-moz-range-thumb]:cursor-not-allowed [&::-moz-range-track]:h-1 [&::-moz-range-track]:rounded-full [&::-moz-range-track]:bg-transparent [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-transparent [&::-webkit-slider-thumb]:-mt-1.5 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-3 [&::-webkit-slider-thumb]:border-blue-light [&::-webkit-slider-thumb]:bg-white-primary disabled:[&::-webkit-slider-thumb]:cursor-not-allowed`,
+        className,
+      )}
       style={{
         background: `linear-gradient(
-                to right,
-                #2d4195 0%,
-                #2d4195 ${percentage}%,
-                #e5e7eb ${percentage}%,
-                #e5e7eb 100%
-              )`,
+          to right,
+          var(--color-blue-light) 0%,
+          var(--color-blue-light) ${percentage}%,
+          var(--color-white-tertiary) ${percentage}%,
+          var(--color-white-tertiary) 100%
+        )`,
       }}
+      {...props}
     />
   );
 };

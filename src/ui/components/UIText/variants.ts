@@ -1,14 +1,14 @@
 import { cva } from 'class-variance-authority';
 
-export const uitext = cva('font-jakarta', {
+export const textStyles = cva('', {
   variants: {
     size: {
-      xs: 'text-[11px]',
-      sm: 'text-[13px]',
-      regular: 'text-[14px]',
-      md: 'text-[18px]',
-      xl: 'text-[24px]',
-      xxl: 'text-[32px]',
+      xs: 'text-caption',
+      sm: 'text-sm',
+      regular: 'text-regular',
+      md: 'text-md',
+      xl: 'text-xl',
+      xxl: 'text-xxl',
     },
     weight: {
       regular: 'font-normal',

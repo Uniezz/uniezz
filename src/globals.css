@@ -1,15 +1,32 @@
 @import 'tailwindcss';
+@import '@fontsource/plus-jakarta-sans/400.css';
+@import '@fontsource/plus-jakarta-sans/600.css';
+@import '@fontsource/plus-jakarta-sans/700.css';
 
 @theme {
-  /* Typography */
-  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-inherit: inherit;
+
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  --text-caption: 11px;
+  --text-sm: 13px;
+  --text-regular: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-xxl: 32px;
 
   /* Text */
   --color-primary: #0b1633;
   --color-secondary: #59648a;
+  --color-muted: #8e99b8;
   --color-white-primary: #ffffff;
   --color-white-secondary: #f4f7fd;
-  --color-white-ternary: #e1e8f7;
+  --color-white-tertiary: #e1e8f7;
 
   /* Blues */
   --color-dark-blue: #05102e;
@@ -18,14 +35,15 @@
   --color-periwinkle: #6d76b5;
   --color-ice: #e7f0ff;
   --color-blue-soft: #e7ecfb;
+
   /* Status */
   --color-success: #12875c;
   --color-success-soft: #dff3e9;
-  --color-success-light: #dff3ea;
   --color-warning: #b5760a;
+  --color-warning-soft: #fbefd9;
   --color-danger: #c6374d;
+  --color-danger-hover: #a62b3f;
   --color-danger-soft: #fae6ea;
-  --color-danger-light: #fbe6ea;
 
   /* Accent */
   --color-accent: #6d5bf5;
@@ -34,7 +52,6 @@
 
   /* Additional */
   --color-ember: #f0703a;
-  --color-warning-soft: #fbefd9;
   --color-ember-soft: #ffede3;
   --color-teal: #12a594;
   --color-teal-soft: #ddf4f0;
@@ -44,7 +61,6 @@
 }
 
 :root {
-  font-family: var(--font-jakarta);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

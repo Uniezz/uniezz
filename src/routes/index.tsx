@@ -26,7 +26,7 @@ function HomePage() {
     <main className="page">
       <UIText>Uniezz</UIText>
       <UIText>A platform for students of Lublin universities.</UIText>
-      <UIButton leftIconButtonColor={'black'} leftIcon={Map} navigateTo="/login">
+      <UIButton leftIconColor="primary" leftIcon={Map} navigateTo="/login">
         Sign in
       </UIButton>
       <UIText size={'xxl'} color={'secondary'}>

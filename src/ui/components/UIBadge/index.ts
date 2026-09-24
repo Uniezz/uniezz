@@ -1,0 +1,1 @@
+export { UIBadge } from './UIBadge';

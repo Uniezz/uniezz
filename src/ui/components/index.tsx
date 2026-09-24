@@ -6,3 +6,4 @@ export * from './UISlider';
 export * from './UIBadge';
 export * from './UIAvatar';
 export * from './UIImage';
+export * from './UICard';

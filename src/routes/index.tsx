@@ -2,6 +2,7 @@ import {
   UIAvatar,
   UIBadge,
   UIButton,
+  UICard,
   UICheckbox,
   UIImage,
   UIInput,
@@ -9,7 +10,7 @@ import {
   UIText,
 } from '@/ui/components';
 import { createFileRoute } from '@tanstack/react-router';
-import { Coffee, Info, Map } from 'lucide-react';
+import { Coffee, Info, Map, PaperBag } from 'lucide-react';
 import { useState } from 'react';
 
 export const Route = createFileRoute('/')({
@@ -57,6 +58,12 @@ function HomePage() {
         imageSrc={
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4W5se-3sXcI-CuvSm5GbPoSk655stnvqEeWyX1M79KA&s=10'
         }
+      />
+      <UICard
+        bottomText={'+248 this month'}
+        centerText="12,480"
+        headerLeftIcon={PaperBag}
+        headerText="Materials in archive"
       />
     </main>
   );

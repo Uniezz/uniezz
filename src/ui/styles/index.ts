@@ -4,3 +4,4 @@ export * from './uiinput';
 export * from './uislider';
 export * from './uibadge';
 export * from './uiavatar';
+export * from './uiimage';

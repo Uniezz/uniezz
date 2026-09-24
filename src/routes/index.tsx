@@ -3,6 +3,7 @@ import {
   UIBadge,
   UIButton,
   UICheckbox,
+  UIImage,
   UIInput,
   UISlider,
   UIText,
@@ -48,6 +49,14 @@ function HomePage() {
         avatarSymbols="KL"
         size={'sm'}
         imgSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBWg3tDy8nk9WjnykVR7g99XJreBqISw4f1PCkg8gsag&s=10"
+      />
+
+      <UIImage
+        aspect={'portrait'}
+        // isLoading
+        imageSrc={
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4W5se-3sXcI-CuvSm5GbPoSk655stnvqEeWyX1M79KA&s=10'
+        }
       />
     </main>
   );

@@ -1,99 +1,73 @@
+@import 'tailwindcss';
+@import '@fontsource/plus-jakarta-sans/400.css';
+@import '@fontsource/plus-jakarta-sans/600.css';
+@import '@fontsource/plus-jakarta-sans/700.css';
+
+@theme {
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-inherit: inherit;
+
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  --text-caption: 11px;
+  --text-sm: 13px;
+  --text-regular: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-xxl: 32px;
+
+  /* Text */
+  --color-primary: #0b1633;
+  --color-secondary: #59648a;
+  --color-muted: #8e99b8;
+  --color-white-primary: #ffffff;
+  --color-white-secondary: #f4f7fd;
+  --color-white-tertiary: #e1e8f7;
+
+  /* Blues */
+  --color-dark-blue: #05102e;
+  --color-blue: #16296b;
+  --color-blue-light: #2d4195;
+  --color-periwinkle: #6d76b5;
+  --color-ice: #e7f0ff;
+  --color-blue-soft: #e7ecfb;
+
+  /* Status */
+  --color-success: #12875c;
+  --color-success-soft: #dff3e9;
+  --color-warning: #b5760a;
+  --color-warning-soft: #fbefd9;
+  --color-danger: #c6374d;
+  --color-danger-hover: #a62b3f;
+  --color-danger-soft: #fae6ea;
+
+  /* Accent */
+  --color-accent: #6d5bf5;
+  --color-accent-hover: #5b49e0;
+  --color-accent-soft: #ece9fe;
+
+  /* Additional */
+  --color-ember: #f0703a;
+  --color-ember-soft: #ffede3;
+  --color-teal: #12a594;
+  --color-teal-soft: #ddf4f0;
+
+  /* Surfaces */
+  --color-surface-tint: #fafbff;
+}
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-  }
 }
 
 body {
-  margin: 0 auto;
-  width: 1126px;
-  max-width: 100%;
-  min-height: 100svh;
-  border-inline: 1px solid var(--border);
-  box-sizing: border-box;
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  min-height: 100svh;
-  padding: 32px 24px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
   margin: 0;
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-
-  @media (max-width: 1024px) {
-    font-size: 36px;
-  }
-}
-
-.lead {
-  max-width: 32rem;
-  margin: 0;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 8px;
-  padding: 12px 20px;
-  border-radius: 8px;
-  border: 1px solid var(--accent);
-  background: var(--accent-bg);
-  color: var(--text-h);
-  font: inherit;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.button:hover {
-  background: var(--accent);
-  color: #fff;
+  min-height: 100svh;
 }
